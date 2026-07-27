@@ -21,47 +21,85 @@
 //     }
 // })();
 
-// Async Await 2
+// // Async Await 2
 
-function takeOrder(){
-    return new Promise((resolve,reject)=>{
-        setTimeout(() => {
-          console.log("Pizza Ordered");
-            resolve();
-        }, 3000);
-    });
-}
-function preparePizza(){
-    return new Promise((resolve,reject)=>{
-        setTimeout(() => {
-          console.log("Pizza Prepared");
-            resolve();
-        }, 3000);
-    });
-}
-function bakePizza(){
-    return new Promise((resolve,reject)=>{
-        setTimeout(() => {
-          console.log("Pizza baked");
-            resolve();
-        }, 3000);
-    });
-}
+// function takeOrder(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(() => {
+//           console.log("Pizza Ordered");
+//             resolve();
+//         }, 3000);
+//     });
+// }
+// function preparePizza(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(() => {
+//           console.log("Pizza Prepared");
+//             resolve();
+//         }, 3000);
+//     });
+// }
+// function bakePizza(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(() => {
+//           console.log("Pizza baked");
+//             resolve();
+//         }, 3000);
+//     });
+// }
 
-function deliverPizza(){
-    return new Promise((resolve,reject)=>{
-        setTimeout(() => {
-          console.log("Pizza Delivered");
-            resolve();
-        }, 3000);
-    });
-}
+// function deliverPizza(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(() => {
+//           console.log("Pizza Delivered");
+//             resolve();
+//         }, 3000);
+//     });
+// }
 
-(async function pizzaOrder() {
+// (async function pizzaOrder() {
 
-    await takeOrder();
-    await preparePizza();
-    await bakePizza();
-    await deliverPizza();
+//     await takeOrder();
+//     await preparePizza();
+//     await bakePizza();
+//     await deliverPizza();
     
+// })();
+
+// async await 3
+
+function login (){
+    return new Promise((resolve , reject )=>{
+    
+        setTimeout(() => {
+            console.log("Logged in ");
+            resolve();
+        }, 3000);
+    });
+}
+
+function fetchProfile (){
+    return new Promise((resolve , reject )=>{
+    
+        setTimeout(() => {
+            console.log("Profile Fetched ");
+            resolve();
+        }, 3000);
+    });
+}
+
+function showDashboard(){
+    return new Promise((resolve , reject )=>{
+    
+        setTimeout(() => {
+            console.log("Dashboard View ");
+            resolve();
+        }, 3000);
+    });
+}
+
+(async function loginSteps() {
+    await login();
+    await fetchProfile();
+    await showDashboard();
 })();
