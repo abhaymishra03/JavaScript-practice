@@ -1,70 +1,70 @@
-// // Async Await 1 
-//  function paymentStatus(){
-//     return new Promise((resolve,reject)=>{
-//         let val = Math.random();
-//         if(val > 0.5){
-//             resolve("Payment Sucessful!");
+// Async Await 1 
+ function paymentStatus(){
+    return new Promise((resolve,reject)=>{
+        let val = Math.random();
+        if(val > 0.5){
+            resolve("Payment Sucessful!");
 
-//         }
-//             reject("Payment failed!");
+        }
+            reject("Payment failed!");
         
-//     });
-// }
-// (async function checkPayment() {
-//     try{
-//         let msg = await paymentStatus();
-//         console.log(msg);
+    });
+}
+(async function checkPayment() {
+    try{
+        let msg = await paymentStatus();
+        console.log(msg);
         
-//     } catch(err){
-//         console.log(err);
+    } catch(err){
+        console.log(err);
         
-//     }
-// })();
+    }
+})();
 
-// // Async Await 2
+// Async Await 2
 
-// function takeOrder(){
-//     return new Promise((resolve,reject)=>{
-//         setTimeout(() => {
-//           console.log("Pizza Ordered");
-//             resolve();
-//         }, 3000);
-//     });
-// }
-// function preparePizza(){
-//     return new Promise((resolve,reject)=>{
-//         setTimeout(() => {
-//           console.log("Pizza Prepared");
-//             resolve();
-//         }, 3000);
-//     });
-// }
-// function bakePizza(){
-//     return new Promise((resolve,reject)=>{
-//         setTimeout(() => {
-//           console.log("Pizza baked");
-//             resolve();
-//         }, 3000);
-//     });
-// }
+function takeOrder(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+          console.log("Pizza Ordered");
+            resolve();
+        }, 3000);
+    });
+}
+function preparePizza(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+          console.log("Pizza Prepared");
+            resolve();
+        }, 3000);
+    });
+}
+function bakePizza(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+          console.log("Pizza baked");
+            resolve();
+        }, 3000);
+    });
+}
 
-// function deliverPizza(){
-//     return new Promise((resolve,reject)=>{
-//         setTimeout(() => {
-//           console.log("Pizza Delivered");
-//             resolve();
-//         }, 3000);
-//     });
-// }
+function deliverPizza(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+          console.log("Pizza Delivered");
+            resolve();
+        }, 3000);
+    });
+}
 
-// (async function pizzaOrder() {
+(async function pizzaOrder() {
 
-//     await takeOrder();
-//     await preparePizza();
-//     await bakePizza();
-//     await deliverPizza();
+    await takeOrder();
+    await preparePizza();
+    await bakePizza();
+    await deliverPizza();
     
-// })();
+})();
 
 // async await 3
 
